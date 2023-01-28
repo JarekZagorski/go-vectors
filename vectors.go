@@ -76,6 +76,15 @@ func Distance[Type Number](lhs, rhs V2d[Type]) (answer float64) {
 	return
 }
 
+func ScalarMultiplication[Type Number](lhs V2d[Type], scalar Type) (answer V2d[Type]) {
+	answer = lhs
+
+	lhs.X *= scalar
+	lhs.Y *= scalar
+
+	return
+}
+
 // general utility
 
 func (this *V2d[Type]) String() string {
